@@ -14,6 +14,9 @@
 		06AD388A2A129E2300339A7D /* DrivingDirectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD38892A129E2300339A7D /* DrivingDirectionTests.swift */; };
 		06AD38942A129E2300339A7D /* DrivingDirectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD38932A129E2300339A7D /* DrivingDirectionUITests.swift */; };
 		06AD38962A129E2400339A7D /* DrivingDirectionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD38952A129E2400339A7D /* DrivingDirectionUITestsLaunchTests.swift */; };
+		06AD38A62A12B67000339A7D /* DrivingDirectionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD38A52A12B67000339A7D /* DrivingDirectionDataModel.swift */; };
+		06AD38A82A12BD2600339A7D /* DirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD38A72A12BD2600339A7D /* DirectionView.swift */; };
+		06AD38AA2A12BD3D00339A7D /* DirectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD38A92A12BD3D00339A7D /* DirectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		06AD388F2A129E2300339A7D /* DrivingDirectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrivingDirectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06AD38932A129E2300339A7D /* DrivingDirectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingDirectionUITests.swift; sourceTree = "<group>"; };
 		06AD38952A129E2400339A7D /* DrivingDirectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingDirectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		06AD38A52A12B67000339A7D /* DrivingDirectionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingDirectionDataModel.swift; sourceTree = "<group>"; };
+		06AD38A72A12BD2600339A7D /* DirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionView.swift; sourceTree = "<group>"; };
+		06AD38A92A12BD3D00339A7D /* DirectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				06AD38782A129E0400339A7D /* DrivingDirectionApp.swift */,
-				06AD387A2A129E0400339A7D /* ContentView.swift */,
 				06AD387C2A129E2300339A7D /* Assets.xcassets */,
+				06AD38A22A12B3E300339A7D /* Model */,
+				06AD38A32A12B3EF00339A7D /* View */,
+				06AD38A42A12B40700339A7D /* View Model */,
 				06AD387E2A129E2300339A7D /* Preview Content */,
 			);
 			path = DrivingDirection;
@@ -125,6 +133,31 @@
 				06AD38952A129E2400339A7D /* DrivingDirectionUITestsLaunchTests.swift */,
 			);
 			path = DrivingDirectionUITests;
+			sourceTree = "<group>";
+		};
+		06AD38A22A12B3E300339A7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06AD38A52A12B67000339A7D /* DrivingDirectionDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06AD38A32A12B3EF00339A7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06AD387A2A129E0400339A7D /* ContentView.swift */,
+				06AD38A72A12BD2600339A7D /* DirectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06AD38A42A12B40700339A7D /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				06AD38A92A12BD3D00339A7D /* DirectionViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06AD38A62A12B67000339A7D /* DrivingDirectionDataModel.swift in Sources */,
 				06AD387B2A129E0400339A7D /* ContentView.swift in Sources */,
+				06AD38A82A12BD2600339A7D /* DirectionView.swift in Sources */,
+				06AD38AA2A12BD3D00339A7D /* DirectionViewModel.swift in Sources */,
 				06AD38792A129E0400339A7D /* DrivingDirectionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
