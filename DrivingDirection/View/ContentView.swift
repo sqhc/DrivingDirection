@@ -11,6 +11,8 @@ struct ContentView: View {
     @State var origin = ""
     @State var destination = ""
     
+    @StateObject var locationManager = LocationManager()
+    
     var body: some View {
         NavigationView{
             VStack{
