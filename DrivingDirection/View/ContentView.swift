@@ -27,6 +27,10 @@ struct ContentView: View {
                 NavigationLink("Drive Direction") {
                     DirectionView(vm: DirectionViewModel(origin: origin, dest: destination))
                 }
+                Divider()
+                NavigationLink("Use your current location"){
+                    DirectionView(vm: DirectionViewModel(origin: "\((locationManager.manager.location?.coordinate.latitude)!), \((locationManager.manager.location?.coordinate.longitude)!)", dest: destination))
+                }
             }
             .navigationTitle("Driving direction")
         }

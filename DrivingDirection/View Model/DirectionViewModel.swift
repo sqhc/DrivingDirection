@@ -30,7 +30,7 @@ class DirectionViewModel: ObservableObject{
     }
     
     func fetchDirection(){
-        searchDriveDirectionString += "\(origin)&destination=\(dest)"
+        searchDriveDirectionString += "\(origin.stringByAddingPercentEncodingForRFC3986()!)&destination=\(dest.stringByAddingPercentEncodingForRFC3986()!)"
         
         guard let url = URL(string: searchDriveDirectionString) else{
             hasError = true
@@ -89,5 +89,14 @@ extension DirectionViewModel{
                 return "GET request failed due to invalid status code."
             }
         }
+    }
+}
+
+extension String{
+    func stringByAddingPercentEncodingForRFC3986() -> String?{
+        let unreversed = "-._~/?"
+        let allowed = NSMutableCharacterSet.alphanumeric()
+        allowed.addCharacters(in: unreversed)
+        return addingPercentEncoding(withAllowedCharacters: allowed as CharacterSet)
     }
 }
