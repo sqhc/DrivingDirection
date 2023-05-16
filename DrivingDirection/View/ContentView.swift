@@ -22,6 +22,9 @@ struct ContentView: View {
                     .frame(width: 400, height: 50)
                     .background(Color.gray.opacity(0.3).cornerRadius(20))
                     .padding(10)
+                NavigationLink("Drive Direction") {
+                    DirectionView(vm: DirectionViewModel(origin: origin, dest: destination))
+                }
             }
             .navigationTitle("Driving direction")
         }
