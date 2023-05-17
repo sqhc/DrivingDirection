@@ -29,6 +29,28 @@ class DirectionViewModel: ObservableObject{
         self.dest = dest
     }
     
+    func fetchDirectionFromLocal(){
+        guard let filePath = Bundle.main.path(forResource: "data", ofType: "json") else {
+            hasError = true
+            error = .failedToUnwrapOptional
+            return
+        }
+        
+        let fileURL = URL(fileURLWithPath: filePath)
+        guard let data = try? Data(contentsOf: fileURL) else{
+            hasError = true
+            error = .failedToDecode
+            return
+        }
+        
+        guard let direction = try? JSONDecoder().decode(DrivingDirection.self, from: data) else{
+            hasError = true
+            error = .failedToDecode
+            return
+        }
+        drivingDirection = direction
+    }
+    
     func fetchDirection(){
         searchDriveDirectionString += "\(origin.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)&destination=\(dest.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)"
         

@@ -41,7 +41,8 @@ struct DirectionView: View {
                 ProgressView()
             }
         }
-        .onAppear(perform: vm.fetchDirection)
+        //.onAppear(perform: vm.fetchDirection)
+        .onAppear(perform: vm.fetchDirectionFromLocal)
         .alert(isPresented: $vm.hasError, error: vm.error) {
             Button {
                 
