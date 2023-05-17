@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		062971802A13DBE80022A2AE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0629717F2A13DBE80022A2AE /* LocationManager.swift */; };
+		062971822A1417FC0022A2AE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 062971812A1417FB0022A2AE /* data.json */; };
 		06AD38792A129E0400339A7D /* DrivingDirectionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD38782A129E0400339A7D /* DrivingDirectionApp.swift */; };
 		06AD387B2A129E0400339A7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD387A2A129E0400339A7D /* ContentView.swift */; };
 		06AD387D2A129E2300339A7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06AD387C2A129E2300339A7D /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		0629717F2A13DBE80022A2AE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		062971812A1417FB0022A2AE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		06AD38752A129E0400339A7D /* DrivingDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrivingDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06AD38782A129E0400339A7D /* DrivingDirectionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrivingDirectionApp.swift; sourceTree = "<group>"; };
 		06AD387A2A129E0400339A7D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				06AD38782A129E0400339A7D /* DrivingDirectionApp.swift */,
 				0629717F2A13DBE80022A2AE /* LocationManager.swift */,
 				06AD387C2A129E2300339A7D /* Assets.xcassets */,
+				062971812A1417FB0022A2AE /* data.json */,
 				06AD38A22A12B3E300339A7D /* Model */,
 				06AD38A32A12B3EF00339A7D /* View */,
 				06AD38A42A12B40700339A7D /* View Model */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06AD38802A129E2300339A7D /* Preview Assets.xcassets in Resources */,
+				062971822A1417FC0022A2AE /* data.json in Resources */,
 				06AD387D2A129E2300339A7D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

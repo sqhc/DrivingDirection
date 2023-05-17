@@ -30,7 +30,7 @@ class DirectionViewModel: ObservableObject{
     }
     
     func fetchDirection(){
-        searchDriveDirectionString += "\(origin.stringByAddingPercentEncodingForRFC3986()!)&destination=\(dest.stringByAddingPercentEncodingForRFC3986()!)"
+        searchDriveDirectionString += "\(origin.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)&destination=\(dest.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)"
         
         guard let url = URL(string: searchDriveDirectionString) else{
             hasError = true
@@ -92,11 +92,11 @@ extension DirectionViewModel{
     }
 }
 
-extension String{
-    func stringByAddingPercentEncodingForRFC3986() -> String?{
-        let unreversed = "-._~/?"
-        let allowed = NSMutableCharacterSet.alphanumeric()
-        allowed.addCharacters(in: unreversed)
-        return addingPercentEncoding(withAllowedCharacters: allowed as CharacterSet)
-    }
-}
+//extension String{
+//    func stringByAddingPercentEncodingForRFC3986() -> String?{
+//        let unreversed = "-._~/?"
+//        let allowed = NSMutableCharacterSet.alphanumeric()
+//        allowed.addCharacters(in: unreversed)
+//        return addingPercentEncoding(withAllowedCharacters: allowed as CharacterSet)
+//    }
+//}
